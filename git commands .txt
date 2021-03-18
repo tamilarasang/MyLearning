@@ -1,0 +1,10 @@
+1) git add filename
+2) git rm --cached filename (remove file added in stage scheme)
+3) git diff  --to see the difference in file
+4) git status -- to see 
+
+commit:
+5) git commit filename -m 'type the message for commit inside this'
+6) git log -- to see log of all files
+7) git config user.name 'userame' ---> initially git dont have user name..to add use name use this cmnd.
+8) git config user.email 'userameemail id' --> display in logs
