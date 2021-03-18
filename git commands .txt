@@ -45,3 +45,15 @@ Merge steps:
 	2) to merge use cmd --> git merge mergingbranchname
 	eg : after gng to branch master1 put cmd --> git merge master2   --> now the master1 is merged with master2. All files in master2 will be available in master1.
 
+
+GIthub steps:
+1) create repostry in github & copy the url to connect with local repo
+
+cmd 
+$ git remote set-url origin https://github.com/tamilarasang/MyLearning.git
+
+now local repositry named master  is connected to remote repo tamilarasang/MyLearning.git
+
+$ git push origin master  -- to push local master  repo changes to git remote repo
+
+
