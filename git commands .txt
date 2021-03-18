@@ -56,4 +56,17 @@ now local repositry named master  is connected to remote repo tamilarasang/MyLea
 
 $ git push origin master  -- to push local master  repo changes to git remote repo
 
+$ git pull origin master -- will pull new added file from remote repository to local
+
+
+to copy already available repositry
+$git clone repourl
+
+Bare Repository -- This is used as a storage to act between different repository
+1) git --bare init  --> create bare reporso
+2) go to noraml repo folder
+	enter cmd --> git push bare_rep_pathname currentreponame
+	Eg: git push ~/Desktop/MyBareRepo Master --> master is current repo
+3) for Bare repo another general repository can pull the files to it.
+		Eg: git pull ~/Desktop/MyBareRepo Master --> master is current repo
 
