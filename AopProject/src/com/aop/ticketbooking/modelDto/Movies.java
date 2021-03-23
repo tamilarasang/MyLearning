@@ -1,5 +1,7 @@
 package com.aop.ticketbooking.modelDto;
 
+import com.aop.logger.LoggableAnnotation;
+
 public class Movies {
 	private String movieName;
 	
@@ -15,6 +17,7 @@ public class Movies {
 				+ seats_booked + ", totalSeats=" + totalSeats + "]";
 	}
 
+	@LoggableAnnotation
 	public String getMovieName() {
 		return movieName;
 	}

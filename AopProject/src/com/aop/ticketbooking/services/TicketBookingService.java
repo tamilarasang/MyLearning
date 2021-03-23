@@ -1,5 +1,6 @@
 package com.aop.ticketbooking.services;
 
+import com.aop.logger.LoggableAnnotation;
 import com.aop.ticketbooking.modelDto.Movies;
 import com.aop.ticketbooking.modelDto.Theater;
 
@@ -17,7 +18,7 @@ public class TicketBookingService {
 	public void setMovies(Movies movies) {
 		this.movies = movies;
 	}
-
+	@LoggableAnnotation
 	public Theater getTheater() {
 		return theater;
 	}

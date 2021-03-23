@@ -12,7 +12,7 @@ public class TicketBookingMainClass {
 		
 		TicketBookingService ticketBookingService = applicationContextXml.getBean("ticketBookingService",TicketBookingService.class);
 		System.out.println(ticketBookingService.getTheater().getTheaterName());
-		ticketBookingService.getTheater().setTheaterName("Theater2");
+		ticketBookingService.getTheater().setTheaterName("dummy name");
 		System.out.println(ticketBookingService.getTheater().getTheaterName());
 	}
 

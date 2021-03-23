@@ -50,4 +50,13 @@
 
 <bean name = "ticketBookingService" class = "com.aop.ticketbooking.services.TicketBookingService" autowire="byName">  </bean>
 <bean name = "loggerAspect" class = "com.aop.logger.LoggerAspect" autowire="byName">  </bean>
+<bean name = "configLoggerAspect" class = "com.aop.logger.ConfigLoggerAspect" autowire="byName">  </bean>
+
+<aop:config>
+<aop:aspect id="configLoggerAspect" ref ="configLoggerAspect">
+<aop:pointcut id="getAllAspect" expression="execution (* *(..))" />
+<aop:pointcut expression="@annotation(com.aop.logger.LoggableAnnotation)" id="annotationexp"/>
+<aop:around pointcut-ref="annotationexp" method="getCustomAopAnnotation"/>
+</aop:aspect>
+</aop:config>
 </beans>
