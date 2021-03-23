@@ -3,12 +3,11 @@
  */
 package com.aop.logger;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-
-import com.aop.ticketbooking.modelDto.Theater;
 
 /**
  * @author tamil
@@ -19,8 +18,8 @@ public class LoggerAspect {
 	
 	//advice method - advice jar
 	@Before("getmethod() && getmainclassmethod()")
-	public void Begins() {
-		System.out.println("Method is started");
+	public void Begins(JoinPoint joinpoint) {
+		System.out.println(joinpoint.getTarget().getClass().getSimpleName()+" "+joinpoint.getSignature().getName());
 	}
 	@After("setmethod()")
 	public void End() {
