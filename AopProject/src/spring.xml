@@ -1,0 +1,53 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" 
+   xmlns:aop = "http://www.springframework.org/schema/aop"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+   http://www.springframework.org/schema/aop 
+   http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
+
+   <!-- bean definition & AOP specific configuration -->
+   
+   <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+<bean name = "movies1" class = "com.aop.ticketbooking.modelDto.Movies">
+<property name="movieName" value ="Movie1"></property>
+<property name="seats_available" value ="70"></property>
+<property name="seats_booked" value ="30"></property>
+<property name="totalSeats" value ="100"></property>
+</bean>
+
+<bean name = "movies2" class = "com.aop.ticketbooking.modelDto.Movies">
+<property name="movieName" value ="Movie2"></property>
+<property name="seats_available" value ="30"></property>
+<property name="seats_booked" value ="40"></property>
+<property name="totalSeats" value ="70"></property>
+</bean>
+
+
+<bean name = "movies3" class = "com.aop.ticketbooking.modelDto.Movies">
+<property name="movieName" value ="Movie3"></property>
+<property name="seats_available" value ="30"></property>
+<property name="seats_booked" value ="10"></property>
+<property name="totalSeats" value ="40"></property>
+</bean>
+
+<bean name = "theater" class = "com.aop.ticketbooking.modelDto.Theater">
+<property name="theaterName" value ="Theater1"></property>
+<property name="moviesAvailable"> 
+<list>
+<ref bean ="movies1"/>
+<ref bean ="movies2"/>
+<ref bean ="movies3"/>
+ <bean class="com.aop.ticketbooking.modelDto.Movies">
+        <property name="movieName" value ="Movie4"></property>
+<property name="seats_available" value ="15"></property>
+<property name="seats_booked" value ="25"></property>
+<property name="totalSeats" value ="40"></property>
+</bean>
+</list></property>
+</bean>
+
+<bean name = "ticketBookingService" class = "com.aop.ticketbooking.services.TicketBookingService" autowire="byName">  </bean>
+<bean name = "loggerAspect" class = "com.aop.logger.LoggerAspect" autowire="byName">  </bean>
+</beans>
