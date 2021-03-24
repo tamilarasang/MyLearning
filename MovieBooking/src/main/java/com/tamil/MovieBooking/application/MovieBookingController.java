@@ -1,4 +1,4 @@
-package com.tamil.MovieBooking;
+package com.tamil.MovieBooking.application;
 
 import java.util.ArrayList;
 import java.util.List;
