@@ -4,3 +4,10 @@ this is for comparing git commits
 
 
 //this change will be in local repo after commit
+
+
+//this change is git staging commit -1
+
+//this change is git staging commit -2 
+
+//this is local commit change

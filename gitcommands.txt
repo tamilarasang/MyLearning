@@ -74,6 +74,12 @@ Bare Repository -- This is used as a storage to act between different repository
 
 //git compare operation
 
-git diff ---will show the diff between local change and staged change
+git diff ---will show the diff between local change and staged change && git diff will show diff between all changed file
+
+git diff -- diff_filename ---> this will show diff of one file mentioned
 
 git diff HEAD --- this will show diff between local and the git repository change in committed stage
+
+git diff --staged HEAD ---to show diff between staged and git repository
+
+
