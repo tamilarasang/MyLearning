@@ -1,0 +1,79 @@
+1) git add filename
+2) git rm --cached filename (remove file added in stage scheme)
+3) git diff  --to see the difference in file
+4) git status -- to see 
+
+commit:
+5) git commit filename -m 'type the message for commit inside this' 
+6) git log --> to see log of all files ( git log --oneline --> this cmd will display logs in one line in shorter details format)
+7) git config user.name 'userame' ---> initially git dont have user name..to add use name use this cmnd.
+8) git config user.email 'userameemail id' --> display in logs
+
+9) touch filename -->create new file in current folder
+
+
+10)ignore files to not to add to git
+	step 1) create a .gitignore file
+		touch .gitignore
+	step 2) enter filename not needed to be add in git and save
+	step 3) add the .gitfile in git , this will make git to not add any new files
+ 
+	step 4) To ignore folders , add foldername followed by "/" in .gitignore file and save. eg: demofolder/
+
+11)Branch related cmd
+	* git branch --> will list all branch
+	create 
+	* git branch branchname --> will create new branch
+	* git checkout branchname --> to switch between branches
+	* git checkout -b branchname ---> will create new branch and switch to that new branch
+	delete
+	* git branch -d branchname --> to delete a branch
+
+12) git checkout . --> this will revert all the local file changes to last checkout version
+13) git checkout . filename --> to revrert changes from specific file
+
+14) git checkout reversionno(1322) --> this will revert your local changes from current version id  to paticular reversionid mentioned in cmd
+15) git checkout master   --> this will update your local version to updated version in git
+ 
+
+Merge steps:
+
+	1) go to branch that need to merge with other branch
+	eg : if i want branch name master1 to be merged with branch name master2 i have to navigate to master1 branch by cmd( all the files present in
+ master2 will be added or updated  and available in master1 after merge. But master2 will remain same as it was not merged with master1).
+		git checkout master1
+	2) to merge use cmd --> git merge mergingbranchname
+	eg : after gng to branch master1 put cmd --> git merge master2   --> now the master1 is merged with master2. All files in master2 will be available in master1.
+
+
+GIthub steps:
+1) create repostry in github & copy the url to connect with local repo
+
+cmd 
+$ git remote set-url origin https://github.com/tamilarasang/MyLearning.git
+
+now local repositry named master  is connected to remote repo tamilarasang/MyLearning.git
+
+$ git push origin master  -- to push local master  repo changes to git remote repo
+
+$ git pull origin master -- will pull new added file from remote repository to local
+
+
+to copy already available repositry
+$git clone repourl
+
+Bare Repository -- This is used as a storage to act between different repository
+1) git --bare init  --> create bare reporso
+2) go to noraml repo folder
+	enter cmd --> git push bare_rep_pathname currentreponame
+	Eg: git push ~/Desktop/MyBareRepo Master --> master is current repo
+3) for Bare repo another general repository can pull the files to it.
+		Eg: git pull ~/Desktop/MyBareRepo Master --> master is current repo
+
+
+
+//git compare operation
+
+git diff ---will show the diff between local change and staged change
+
+git diff HEAD --- this will show diff between local and the git repository change in committed stage
