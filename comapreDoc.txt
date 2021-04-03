@@ -1,7 +1,7 @@
 this is for comparing git commits
 
 //this commit will be in git remote repo
-
+---this moving to repo
 
 //this change will be in local repo after commit
 
